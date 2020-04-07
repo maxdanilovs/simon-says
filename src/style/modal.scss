@@ -1,0 +1,44 @@
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  &.show-modal {
+    display: block;
+  }
+}
+
+.modal-dialog {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 300px);
+  left: calc(50% - 190px);
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 15px 15px 40px 0 rgba(0,0,0,0.7);
+  padding: 40px;
+  transform: translateY(-200%);
+  transition: all 500ms ease;
+  &.show-dialog {
+    transform: translateY(0);
+  }
+  button {
+    margin-top: 40px;
+    background-color: #018383;
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      background-color: #02a8a8;
+    }
+  }
+}

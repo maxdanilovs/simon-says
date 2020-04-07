@@ -1,0 +1,67 @@
+@mixin neon-shadow($color) {
+  box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 80px $color;
+  filter: contrast(2);
+}
+
+.simon-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  @media (max-width: 600px) {
+    margin: 0 10px;
+  }
+}
+
+.simon-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+  border: none;
+  &:active {
+    border: none;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &.green {
+    background-color: #5AD515;
+    &.activated {
+      @include neon-shadow(#5AD515);
+    }
+    &:active {
+      @include neon-shadow(#5AD515);
+    }
+  }
+  &.yellow {
+    background-color: #EFC421;
+    &.activated {
+      @include neon-shadow(#EFC421);
+    }
+    &:active {
+      @include neon-shadow(#EFC421);
+    }
+  }
+  &.blue {
+    background-color: #4D99DE;
+    &.activated {
+      @include neon-shadow(#4D99DE);
+    }
+    &:active {
+      @include neon-shadow(#4D99DE);
+    }
+  }
+  &.red {
+    background-color: #E33056;
+    &.activated {
+      @include neon-shadow(#E33056);
+    }
+    &:active {
+      @include neon-shadow(#E33056);
+    }
+  }
+  &.clickable {
+    cursor: pointer;
+  }
+}
